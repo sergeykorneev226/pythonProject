@@ -209,33 +209,68 @@
 
 
 
+# class Human():
+#     name = ''
+#     gender = ''
+#     height = 0
+#     weight = 0
+#     hands = 2
+#
+# class Spider():
+#     gender = ''
+#     height = 0
+#     weight = 0
+#     hands = 6
+#
+#     def webshoot(self):
+#         print('Pew-Pew')
+#
+# class SpiderMan(Human, Spider):
+#     def __init__(self, name, gender):
+#         self.name = name
+#         self.gender = gender
+
+# peter_parker = SpiderMan('Peter Parker', 'Male')
+# print(peter_parker.name)
+# print(peter_parker.gender)
+# print(peter_parker.height)
+# print(peter_parker.weight)
+# print(peter_parker.hands)
+# peter_parker.webshoot()
+#
+# print(SpiderMan.mro())
+
+
 class Human():
-    name = ''
-    gender = ''
-    height = 0
-    weight = 0
-    hands = 2
+    def __init__(self, name, gender, height=0, weight=0, hands=2):
+        self.name = name
+        self.gender = gender
+        self.height = height
+        self.weight = weight
+        self.hands = hands
 
 class Spider():
-    gender = ''
-    height = 0
-    weight = 0
-    hands = 6
+    def __init__(self, gender, height=0, weight=0, hands=6):
+        self.gender = gender
+        self.height = height
+        self.weight = weight
+        self.hands = hands
 
     def webshoot(self):
         print('Pew-Pew')
 
 class SpiderMan(Human, Spider):
     def __init__(self, name, gender):
-        self.name = name
-        self.gender = gender
+        self.weapons = []
+        super().__init__(name, gender)
+
+    def attack(self):
+        if 'web' in self.weapons:
+            super().webshoot()
+        else:
+            print('No web')
 
 peter_parker = SpiderMan('Peter Parker', 'Male')
-print(peter_parker.name)
-print(peter_parker.gender)
-print(peter_parker.height)
-print(peter_parker.weight)
-print(peter_parker.hands)
-peter_parker.webshoot()
+peter_parker.attack()
 
-print(SpiderMan.mro())
+
