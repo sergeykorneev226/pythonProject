@@ -273,4 +273,6 @@ class SpiderMan(Human, Spider):
 peter_parker = SpiderMan('Peter Parker', 'Male')
 peter_parker.attack()
 
+peter_parker.weapons = 'web'
+peter_parker.attack()
 
