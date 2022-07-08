@@ -276,3 +276,6 @@ peter_parker.attack()
 peter_parker.weapons = 'web'
 peter_parker.attack()
 
+print(SpiderMan.mro())
+
+
