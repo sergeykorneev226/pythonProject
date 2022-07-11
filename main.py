@@ -350,3 +350,135 @@
 # peter_parker + 'strike'
 # print(peter_parker.weapons)
 
+
+# f = open('text.txt')
+# print(type(f))
+#
+# data = f.read()
+# print(data)
+# print(type(data))
+#
+# f.close()
+# print(data)
+
+
+# def is_closed(file_):
+#     if file_.closed:
+#         print('Файл закрыт')
+#     else:
+#         print('Файл открыт')
+#
+# with open('text.txt') as f:
+#     # print(type(f))
+#     data = f.read()
+#     is_closed(f)
+#     f.read()
+#
+# is_closed(f)
+# # f.read()
+
+# try:
+#     with open('text.txt') as f:
+#         data = f.read()
+#         is_closed(f)
+#         1/0
+# except ZeroDivisionError:
+#     is_closed(f)
+
+
+# with open('text.txt') as f:
+#     data = f.read()
+#     print(type(data))
+#     print(data)
+#
+# print(data)
+
+# with open('text.txt') as f:
+#     print(f.readline().strip())
+#     print(f.readline().strip())
+#     print(f.readline().strip())
+#     print(f.readline().strip())
+#     print(f.readline().strip())
+#     print(f.readline().strip())
+#     print(f.readline().strip())
+#     print(f.readline() == '')
+#     print(f.readline() is None)
+
+# with open('text.txt') as f:
+#     lines = f.readlines()
+#     print(type(lines))
+#     print(len(lines))
+#     print(lines[3])
+
+# with open('text.txt') as f:
+#     for i in f:
+#         print(i.strip())
+
+# with open('text.txt') as f:
+#     for idx, i in enumerate(f):
+#         print(idx, i.strip())
+
+
+# with open('test.txt', 'w') as f:
+#     f.write('Привет!\n')
+# with open('test.txt', 'a') as f:
+#     f.write('Первая строка\n')
+# with open('test.txt', 'a') as f:
+#     f.write('Вторая\n')
+# with open('test.txt', 'a') as f:
+#     f.write('\n')
+# with open('test.txt', 'a') as f:
+#     f.write('123\n')
+#
+# with open('test.txt') as f:
+#     print(f.read())
+
+
+# with open('test.txt', 'rb') as f:
+#     data = f.read()
+#     print(type(data))
+#     print(data)
+
+
+# import os
+# import time
+#
+# with open('test.txt', 'w') as f:
+#     f.write(f'{time.time()}')
+#
+# with open('test.txt', 'r') as f:
+#     print(f.read())
+#
+# print(os.getcwd())
+# file_path = os.path.join(os.getcwd(), 'test.txt')
+# print(file_path)
+
+
+# with open('utf.txt', 'w', encoding='utf-8') as f:
+#     f.write('Привет, мир!')
+#
+# with open('cp.txt', 'w', encoding='cp1251') as f:
+#     f.write('Привет, мир!')
+
+# with open('utf.txt', 'rb') as f:
+#     print(f.read())
+#
+# with open('cp.txt', 'rb') as f:
+#     print(f.read())
+
+# with open('cp.txt', 'r', encoding='cp1251') as f:
+#     print(f.read())
+
+# with open('ascii.txt', 'w', encoding='ascii') as f:
+#     f.write('Privet, mir!')
+#
+# with open('ascii.txt') as f:
+#     print(f.read())
+
+
+a = [1, 2, 3]
+b = a
+c = b
+b[1] = 5
+print(a, b, c)
+
